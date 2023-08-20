@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detailed News</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+      #news{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:10px;
+        width: 70%;
+        position: absolute;
+        top:100px;
+        left: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <div class="container">
+          
+            <div class="row" style="justify-content: space-around; align-items: center;">
+              <a href="/worldNews.html" style="padding: 10px; text-decoration: none; color: black;"><h1>worldnews</h1></a>
+
+              <nav>
+                <ul >
+                  <li style="padding: 10px; list-style: none;" id="all"><h1>all</h1></li>
+                  <li style="padding: 10px; list-style: none;" id="india"><h1>india</h1></li>
+                  <li style="padding: 10px; list-style: none;" id="china"><h1>china</h1></li>
+                  <li style="padding: 10px; list-style: none;" id="usa"><h1>Usa</h1></li>
+                  <li style="padding: 10px; list-style: none;" id="uk"><h1>UK</h1></li>
+                  <li style="padding: 10px; list-style: none;" id="nz"><h1>New Zealand</h1></li>
+                </ul>
+              </nav>
+
+              <nav>
+                <input type="text" id="value" placeholder="search country">
+                <button id="search">search</button>
+              </nav>
+            </div>
+
+            </div>
+      </header>
+    </div>
+    <div>
+      <div>
+        <aside>
+          <div id="signui"></div>
+        </aside>
+      </div>
+      <div>
+
+      <div class="container">
+        <div id="news"></div>
+      </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/news.js"></script>
+</html>

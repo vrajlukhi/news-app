@@ -1,0 +1,42 @@
+
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+header nav ul{
+    display: flex;
+
+}
+
+header nav ul li{
+    justify-content: space-between;
+}
+
+.container{
+    max-width:1140px;
+    margin: auto;
+}
+
+aside{
+    width: 15%;
+    padding: 10px;
+    height: 100vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: antiquewhite;
+    overflow: scroll;
+}
+
+aside #signui{
+    border: 1px solid salmon;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
