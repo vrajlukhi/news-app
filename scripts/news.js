@@ -22,7 +22,6 @@ fetch("http://localhost:3000/news")
     .then((ele) => ele.json())
     .then((data) => {
         arr = data
-        console.log(arr);
     })
 
 let get2 = async () => {
@@ -34,7 +33,6 @@ get2()
 let handledesh = (pera) => {
     let data = arr.filter((so) => so.country == pera)
     display(data)
-    console.log(data);
 }
 
 document.querySelector("#india").addEventListener("click", () => get2())
@@ -44,6 +42,21 @@ document.querySelector("#usa").addEventListener("click", () => handledesh("us"))
 document.querySelector("#uk").addEventListener("click", () => handledesh("uk"))
 document.querySelector("#nz").addEventListener("click", () => handledesh("nz"))
 
+
+
+let search = () => {
+    let value = document.querySelector("#value").value
+    let data = arr.filter((ele) => ele.country == value)
+    display(data)
+}
+
+document.querySelector("#search").addEventListener("click", search)
+
+document.querySelector("#value").addEventListener("keypress", (e) => {
+    if (e.key == "Enter") {
+        search()
+    }
+})
 
 let output = (data) => {
     document.querySelector("#signui").innerHTML = ""
@@ -66,20 +79,6 @@ let output = (data) => {
         document.querySelector("#signui").append(div)
     })
 }
-
-let search = () => {
-    let value = document.querySelector("#value").value
-    let data = arr.filter((ele) => ele.country == value)
-    display(data)
-}
-
-document.querySelector("#search").addEventListener("click", search)
-
-document.querySelector("#value").addEventListener("keypress", (e) => {
-    if (e.key == "Enter") {
-        search()
-    }
-})
 
 let get = async () => {
     fetch("http://localhost:3000/signup")

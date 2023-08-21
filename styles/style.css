@@ -7,8 +7,12 @@
 
 header{
     padding: 10px;
-    background-color: aquamarine;
+    background-color: antiquewhite;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
 }
 
 header nav ul{
@@ -26,16 +30,19 @@ header nav ul li{
 }
 
 aside{
-    width: 15%;
+    width: 20%;
     padding: 10px;
     height: 100vh;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    background-color: aquamarine;
+    background-color: antiquewhite;
+    position: fixed;
     overflow: scroll;
+    scroll-behavior: smooth;
+    top: 13%;
 }
 
 aside #signui{
-    border: 1px solid gray;
+    border: 1px solid salmon;
 }
 .row{
     display: flex;

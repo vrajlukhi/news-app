@@ -23,8 +23,6 @@ let output = (data) => {
     })
 }
 
-
-
 let get = async ()=>{
     fetch("http://localhost:3000/signup")
     .then((ele)=>ele.json())
@@ -34,10 +32,9 @@ let get = async ()=>{
     })
 }
 get()
+
 document.querySelector("#form").addEventListener("submit",(e)=>{
     e.preventDefault()
-
-    console.log("sgy");
     let user ={
         img:document.querySelector("#img").value,
         name:document.querySelector("#name").value,
@@ -45,12 +42,9 @@ document.querySelector("#form").addEventListener("submit",(e)=>{
         password:document.querySelector("#password").value,
         country:document.querySelector("#country").value
     }
-    console.log(user);
-
     fetch("http://localhost:3000/signup",{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify(user)
     })
-
 })
